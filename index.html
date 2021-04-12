@@ -29,7 +29,9 @@
     <section class="section">
       <div class="container">
         <h1 class="title">Simpson API</h1>
-
+        <button id="reloadSimp" onClick="fetchSimpsonsJSON()">
+          New quotes
+        </button>
         <div class="content" id="simpsons"></div>
       </div>
     </section>
@@ -62,8 +64,10 @@
             // Build a block of HTML
 
             const simpsonsHtml = `
-							<p><strong>${simpsons[0].character}</strong></p>
+					<p>	<h1>${simpsons[0].character}</h1></p>
 							<img src="${simpsons[0].image}" />
+							<p><strong>${simpsons[0].quote}</strong></p>
+
 			
 						`;
 
